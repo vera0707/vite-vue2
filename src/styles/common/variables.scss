@@ -1,0 +1,29 @@
+// 基本颜色
+$color-white: #fff;
+$color-black: #455a74;
+$color-blue: #169bfa;
+$color-green: #31cf9a;
+$color-light-green: #96e036;
+$color-red: #ff5f5f;
+$color-light-red: #ff956f;
+$color-orange: #ffbc33;
+
+// 灰色
+$color-grey: #7b93a7;
+$color-light-grey: #909399;
+$color-lighter-grey: #c0c4cc;
+$border-color: #e6e6e6;
+
+// 文字
+$color-content: #f5f8fa;
+
+$color-lighter-blue: #f6f9fb;
+// 渐变
+$gradient-blue: linear-gradient(-45deg, #47b2fb 0%, #2f95fa 100%);
+$gradient-light-blue: linear-gradient(-47deg, #81c2ff 0%, #47b2fb 100%);
+$gradient-green: linear-gradient(-45deg, #1dcfab 0%, #46cf8f 100%);
+$gradient-light-green: linear-gradient(-224deg, #73e03d 0%, #ade01f 100%);
+$gradient-orange: linear-gradient(-45deg, #ffd119 0%, #ffac4c 100%);
+$gradient-light-red: linear-gradient(-224deg, #ff9054 0%, #ff9787 100%);
+$gradient-red: linear-gradient(-45deg, #ff788a 0%, #ff4545 100%);
+$gradient-grey: linear-gradient(-45deg, #a2b3c1 0%, #7b93a7 100%);

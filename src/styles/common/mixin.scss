@@ -1,0 +1,77 @@
+// 混合器
+// 图标
+@mixin icon($width, $height, $imgUrl) {
+  display: inline-block;
+  width: $width;
+  height: $height;
+  background: url($imgUrl) no-repeat center center;
+}
+// 单行省略
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+// 多行省略
+@mixin lines-ellipsis($lines) {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
+// 阴影遮罩
+@mixin mask {
+  width: 100%;
+  height: 100%;
+  background: rgba($color: #010017, $alpha: 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+// 定位上下水平居中
+@mixin alignCenter($ml, $mt) {
+  top: 50%;
+  left: 50%;
+  margin-left: $ml;
+  margin-top: $mt;
+}
+
+// 向右指向三角形
+@mixin triangle-right($bt, $bb, $bl, $color) {
+  width: 0;
+  height: 0;
+  border-top: $bt solid transparent;
+  border-bottom: $bt solid transparent;
+  border-left: $bl solid $color;
+}
+
+@mixin triangle-left($bt, $bb, $br, $color) {
+  width: 0;
+  height: 0;
+  border-top: $bt solid transparent;
+  border-bottom: $bt solid transparent;
+  border-right: $br solid $color;
+}
+
+@mixin scroll-bar {
+  &::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+    // -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.22);
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgba(0, 0, 0, 0.34);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #c0c0c0;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px 0 rgba(153, 153, 153, 0.5);
+  }
+}
