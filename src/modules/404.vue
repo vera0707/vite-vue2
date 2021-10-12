@@ -1,7 +1,13 @@
 <template>
   <div class="wrapper">
-    <img src="@/assets/404.svg" width="150" alt="" />
-    <p class="font20 mt20">哎呀迷路了!</p>
+    <img
+      src="@/assets/404.svg"
+      width="150"
+      alt=""
+    >
+    <p class="font20 mt20">
+      哎呀迷路了!
+    </p>
     <section class="txl">
       <h4>可能的原因:</h4>
       <ul class="mt10">
@@ -10,7 +16,10 @@
       </ul>
     </section>
     <div>
-      <el-button type="primary" @click="$router.push('/collect/collectField')">
+      <el-button
+        type="primary"
+        @click="$router.push('/collect/collectField')"
+      >
         返回首页
       </el-button>
     </div>

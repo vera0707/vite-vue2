@@ -16,7 +16,7 @@ export default defineConfig({
       include: ['src/**/*.js', 'src/**/*.vue', 'src/**/*.ts']
     })
   ],
-  devServer: {
+  server: {
     proxy: {
       '/fm-webser/api': {
         target: 'http://10.1.193.42:8081/'
