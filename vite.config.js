@@ -18,12 +18,12 @@ export default defineConfig({
   ],
   server: {
     proxy: {
-      '/fm-webser/api': {
-        target: 'http://10.1.193.42:8081/'
-      },
       '/hb-weber/usermng/genVerificationCode': {
         target: 'http://10.1.193.42:8081/'
-      }
+      },
+      '/hb-weber': {
+        target: 'http://10.1.193.42:8081/',
+      },
     }
   }
 });

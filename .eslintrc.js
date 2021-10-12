@@ -10,6 +10,9 @@ module.exports = {
     'eslint:recommended',
     'prettier'
   ],
+  parserOptions: {
+    sourceType: 'module'
+  },
   plugins:['prettier'],
   rules: {
     // 提示级别为错误：缩进设置为 2 个空格，SwitchCase 设置为 1，case 子句将相对于 switch 语句缩进 2 个空格

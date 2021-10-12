@@ -3,7 +3,7 @@ import App from './App.vue';
 import store from '@/store';
 import router from '@/router';
 import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+import '@/styles/ele_custom.scss';
 import '@/styles/icons.scss';
 import '@/styles/reset.scss';
 import '@/styles/global.scss';

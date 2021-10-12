@@ -98,6 +98,7 @@ const loginFormRules = {
   passWord: [{ required: true, message: '密码不能为空', trigger: 'change' }],
   vercode: [{ required: true, message: '验证码不能为空', trigger: 'change' }]
 };
+import userApi from '@/api/user';
 
 export default {
   name: 'login',
@@ -125,6 +126,34 @@ export default {
     },
     submit(e) {
       e.preventDefault();
+      const formName = 'loginForm';
+      this.loading = true;
+      this.$refs[formName].validate((valid) => {
+        if (valid) {
+          userApi
+            .login({ ...this.loginForm })
+            .then((res) => {
+              if (res.CODE === 0) {
+                this.$message({
+                  message: '登录成功',
+                  type: 'success',
+                  duration: 800
+                });
+                if (this.saveAccount) {
+                  localStorage.setItem('userCode', this.loginForm.userCode);
+                } else localStorage.setItem('userCode', '');
+                this.$store.dispatch('user/login', res.RESULT);
+                this.$router.push('/home')
+              } else {
+                this.changeVerify();
+              }
+            })
+            .finally(() => {
+              this.loading = false;
+            });
+        }
+        return null;
+      });
     }
   }
 };
@@ -251,7 +280,9 @@ export default {
   width: 100%;
   height: 100%;
 }
-::v-deep .login-form {
+</style>
+<style lang="scss">
+.login-form {
   .el-input--small .el-input__icon {
     font-size: 16px;
     opacity: 0.3;
