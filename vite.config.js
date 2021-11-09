@@ -27,11 +27,8 @@ export default defineConfig({
   ],
   server: {
     proxy: {
-      '/hb-weber/usermng/genVerificationCode': {
-        target: 'http://10.1.193.42:8081/',
-      },
-      '/hb-weber': {
-        target: 'http://10.1.193.42:8081/',
+      '/test-url': {
+        target: 'http://localhost:8080/',
       },
     }
   }

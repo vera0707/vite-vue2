@@ -1,4 +1,4 @@
-// 基本颜色
+/* 基本颜色 */
 $color-white: #fff;
 $color-black: #455A74;
 $color-blue: #169BFA;
@@ -8,17 +8,18 @@ $color-red: #FF5F5F;
 $color-light-red: #FF956F;
 $color-orange: #FFBC33;
 
-// 灰色
+/* 灰色 */
 $color-grey: #7B93A7;
 $color-light-grey: #909399;
 $color-lighter-grey: #C0C4CC;
 $border-color: #e6e6e6;
 
-// 文字
+/* 文字 */
 $color-content: #f5f8fa;
-
 $color-lighter-blue: #f6f9fb;
-// 渐变
+
+
+/* 渐变 */
 $gradient-blue: linear-gradient(-45deg, #47B2FB 0%, #2F95FA 100%);
 $gradient-light-blue: linear-gradient(-47deg, #81C2FF 0%, #47B2FB 100%);
 $gradient-green: linear-gradient(-45deg, #1DCFAB 0%, #46CF8F 100%);

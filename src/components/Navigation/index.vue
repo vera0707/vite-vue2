@@ -3,8 +3,7 @@
     <div class="nav-bar">
       <div class="nav-bar-contain">
         <section>
-          <img class="vtm" src="@/assets/login_logo.png" alt="logo" height="30" />
-          <span class="nav-title ml15 vtm">欢迎登录移动传输采集云平台</span>
+          <span class="nav-title ml15 vtm">欢迎访问首页</span>
         </section>
         <section class="nav-menu">
           <el-menu

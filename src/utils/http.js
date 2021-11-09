@@ -10,7 +10,6 @@ axios.defaults.timeout = 1200000;
 // http request 拦截器
 axios.interceptors.request.use(
   (config) => {
-    // url: `/hb-weber${config.url}`
     const $config = { ...config };
     const ContentType = $config.headers['Content-Type'];
     const { userToken } = store.state.user;

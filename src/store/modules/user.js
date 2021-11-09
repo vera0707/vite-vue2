@@ -45,22 +45,6 @@ export default {
       commit('SET_MANU_LIST', []);
       commit('SET_USER_TOKEN', null);
     },
-    setActiveMenu({ dispatch, commit }, path) {
-      return dispatch('getMenuList').then((menuList) => {
-        let activeMenu = null;
-        const findCodePath = (data = [], CODE = null) => {
-          for (let i = 0; i < data.length; i++) {
-            const rootCode = CODE || data[i].CODE;
-            if (activeMenu) return;
-            if (data[i].VIEWNAME === path) activeMenu = rootCode;
-            else if (data[i].CHILDREN) findCodePath(data[i].CHILDREN, rootCode);
-            else if (data[i].menu_list) findCodePath(data[i].menu_list, rootCode);
-          }
-        };
-        findCodePath(menuList, null);
-        commit('SET_ACTIVE_MENU', activeMenu);
-      });
-    },
     getStaticData({ commit }, data) {
       commit('SET_STATIC_DATA', data);
     }

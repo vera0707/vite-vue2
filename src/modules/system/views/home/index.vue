@@ -1,5 +1,5 @@
 <template>
-  <div>首页</div>
+  <div>这看这啥也没有，怪尴尬的~</div>
 </template>
 <script>
 export default {
